@@ -207,12 +207,16 @@ Modal
   place-items: center;
   transition: var(--transition);
   visibility: hidden;
+  opacity: 0;
   z-index: -1;
 }
 /* OPEN/CLOSE MODAL */
 .show-modal {
+  opacity: 1;
   visibility: visible;
   z-index: 10;
+  transition-property: opacity;
+  transition-property: duration 1s;
 }
 .modal-container {
   background: var(--clr-white);
