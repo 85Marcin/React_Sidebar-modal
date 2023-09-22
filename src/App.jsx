@@ -4,11 +4,11 @@ import Sidebar from "./Sidebar"
 import Home from "./Home"
 function App() {
   return (
-    <main>
+    <>
       <Home />
       <Modal />
       <Sidebar />
-    </main>
+    </>
   )
 }
 
