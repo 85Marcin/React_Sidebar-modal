@@ -7,7 +7,7 @@ import { useGlobalContext } from "./context"
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext()
   return (
-    <aside className="sidebar">
+    <aside className={isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}>
       <div className="sidebar-header">
         <img src={logo} alt="codding addict" className="logo" />
         <button className="close-btn" onClick={closeSidebar}>
@@ -26,7 +26,7 @@ const Sidebar = () => {
           )
         })}
       </ul>
-      <ul className="social-links">
+      <ul className="social-icons">
         {social.map((link) => {
           const { id, url, icon } = link
           return (
